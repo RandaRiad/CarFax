@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Embedded;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.Expose;
@@ -15,10 +16,13 @@ import java.util.List;
 @Entity(tableName = "Listing")
 public class Listing implements Serializable {
 
+
+
     @SerializedName("dealer")
     @Expose
     @Embedded
     private Dealer dealer;
+
 
     @PrimaryKey(autoGenerate = true)
     @NonNull
